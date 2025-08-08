@@ -10,23 +10,39 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Mobile App Colour</title>
   </head>
   <body>
     <div class="container">
-      <form>
-        <input type="search" placeholder="Enter a city.." />
-        <input type="submit" value="search" />
+      <form class="search-form" id="search-form">
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          class="search-form-input"
+          id="search-form-input"
+          required
+        />
+        <input type="submit" value="search" class="submit-button" />
       </form>
-      <h1>Perth</h1>
+      <h1 id="city">Perth</h1>
       <img
         src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
         class="icon"
       />
       <h2>29°C</h2>
-      <p>Monday 25/05, Cloudy</p>
-      <p>Humidity 60%, Wind 10km/h</p>
+      <div class="weather-descriptions">
+        <div>
+          <span>Monday 25/05</span>,
+          <span>Cloudy</span>
+        </div>
+        <div>
+          <span>Humidity:60%</span>,
+          <span>Wind:5mk/h</span>
+        </div>
+      </div>
+
       <div class="forecast-details">
         <div>Mon</div>
         <img

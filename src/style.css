@@ -10,13 +10,40 @@ body {
   color: rgb(11, 0, 80);
 }
 
+.search-form-input {
+  font-size: 14px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+.submit-button {
+  font-size: 14px;
+  border: 1px solid rgb(170, 170, 170);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
 h1 {
   color: rgb(11, 0, 80);
+  margin: 20px 0 0 0;
+  font-size: 30px;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+}
+h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.weather-descriptions {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .forecast-details {
