@@ -1,6 +1,4 @@
 function showElement(response) {
-  console.log(response.data);
-
   let searchCity = document.querySelector("#city");
   searchCity.innerHTML = response.data.name;
 }
