@@ -19,9 +19,17 @@ body {
 }
 .submit-button {
   font-size: 14px;
-  border: 1px solid rgb(170, 170, 170);
+  border: 0.5px solid rgb(93, 93, 93);
   padding: 5px 10px;
   border-radius: 8px;
+  background-color: #fff5fb;
+  color: rgb(93, 93, 93);
+}
+.submit-button:hover {
+  border-color: transparent;
+  background-color: rgb(132, 132, 132);
+  color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 h1 {
@@ -46,6 +54,20 @@ h2 {
   letter-spacing: 0.5px;
 }
 
+.description {
+  text-transform: uppercase;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-5days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .forecast-details {
   display: flex;
   flex-direction: column;

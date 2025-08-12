@@ -24,32 +24,74 @@
           id="search-form-input"
           required
         />
-        <input type="submit" value="search" class="submit-button" />
+        <input type="submit" value="Search" class="submit-button" />
       </form>
       <h1 id="city">Perth</h1>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
-        class="icon"
-      />
-      <h2>29°C</h2>
+      <div>
+        <img
+          src="https://openweathermap.org/img/wn/01d@2x.png"
+          class="icon"
+          id="icon"
+        />
+      </div>
+
+      <div class="temperature">
+        <h2 id="current-temperature">29</h2>
+        <span>°C</span>
+      </div>
+
       <div class="weather-descriptions">
         <div>
-          <span>Monday 25/05</span>,
-          <span>Cloudy</span>
+          <span id="date">Monday 25/05</span>,
+          <span id="description" class="description">Cloudy</span>
         </div>
         <div>
-          <span>Humidity:60%</span>,
-          <span>Wind:5mk/h</span>
+          <span>Humidity:<strong id="humidity">60</strong>%</span>,
+          <span>Wind:<strong id="wind">5</strong>mk/h</span>
         </div>
       </div>
 
-      <div class="forecast-details">
-        <div>Mon</div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
-          class="forecast-icon"
-        />
-        <div>Rain</div>
+      <div class="forecast-5days">
+        <div class="forecast-details">
+          <div>Mon</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
+            class="forecast-icon"
+          />
+          <div>Rain</div>
+        </div>
+        <div class="forecast-details">
+          <div>Mon</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
+            class="forecast-icon"
+          />
+          <div>Rain</div>
+        </div>
+        <div class="forecast-details">
+          <div>Mon</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
+            class="forecast-icon"
+          />
+          <div>Rain</div>
+        </div>
+        <div class="forecast-details">
+          <div>Mon</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
+            class="forecast-icon"
+          />
+          <div>Rain</div>
+        </div>
+        <div class="forecast-details">
+          <div>Mon</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4440/4440865.png"
+            class="forecast-icon"
+          />
+          <div>Rain</div>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
