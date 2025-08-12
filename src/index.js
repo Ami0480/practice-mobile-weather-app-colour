@@ -69,7 +69,6 @@ function forecastShowElement(response) {
      <div class="description">${description}
     </div>`;
   });
-  console.log(response.data.list);
 }
 
 function displayCity(city) {
