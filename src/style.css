@@ -76,6 +76,7 @@ h2 {
   align-items: center;
   justify-content: flex-end;
   height: 300px;
+  padding-right: 10px;
 }
 
 .forecast-icon {
