@@ -44,10 +44,40 @@ function formatDate(date) {
   return `${day} ${hour}:${minute}`;
 }
 
+function forecastShowElement(response) {
+  let forecastList = response.data.list;
+
+  let dailyForecast = forecastList.filter((forecast) =>
+    forecast.dt_txt.includes("12:00:00")
+  );
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "";
+
+  dailyForecast.forEach((forecast) => {
+    let date = new Date(forecast.dt * 1000);
+    let day = date.toLocaleDateString("en-AU", { weekday: "short" });
+    let icon = forecast.weather[0].icon;
+    icon = icon.replace("n", "d");
+    let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    let description = forecast.weather[0].description;
+
+    forecastElement.innerHTML += `
+    <div class="forecast-details">
+     <div class="day">${day}</div>
+     <img src="${iconUrl}" class="forecast-icon" />
+     <div class="description">${description}
+    </div>`;
+  });
+  console.log(response.data.list);
+}
+
 function displayCity(city) {
   let apiKey = "d1193959d2d841ec7555416d715716a6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showElement);
+  let currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let forecastWeatherApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(currentWeatherApiUrl).then(showElement);
+  axios.get(forecastWeatherApiUrl).then(forecastShowElement);
 }
 
 function searchForCity(event) {
@@ -60,3 +90,5 @@ function searchForCity(event) {
 
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", searchForCity);
+
+displayCity("Perth");
