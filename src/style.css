@@ -55,9 +55,9 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-.description {
+.current-description {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .temperature {
@@ -81,4 +81,72 @@ h2 {
 .forecast-icon {
   width: 50px;
   height: 50px;
+}
+.description {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin: 60px;
+  }
+  .search-form {
+    text-align: center;
+  }
+  .search-form-input {
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    margin-right: 20px;
+  }
+  .submit-button {
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+  }
+  .current-information {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  .current-temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .current-details {
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    margin: 20px 0 0 0;
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .weather-descriptions {
+    font-size: 18px;
+  }
+  .current-description {
+    font-size: 18px;
+  }
+  .date-description {
+    margin-bottom: 10px;
+  }
+  .forecast-5days {
+    display: flex;
+    justify-content: space-around;
+  }
+  .day {
+    font-size: 18px;
+  }
+  .forecast-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .description {
+    font-size: 16px;
+  }
 }
