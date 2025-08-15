@@ -8,7 +8,7 @@ body {
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: rgb(11, 0, 80);
-  padding: 80px;
+  padding: 40px;
 }
 
 .search-form-input {
@@ -164,7 +164,7 @@ h2 {
     font-size: 18px;
   }
   .forecast-details {
-    height: 430px;
+    height: 400px;
   }
   .forecast-icon {
     max-width: 70px;
