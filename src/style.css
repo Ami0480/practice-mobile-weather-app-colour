@@ -1,15 +1,14 @@
 body {
-  background-color: #aee1f9;
-  background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
   margin: 0;
-  height: 100dvh;
 }
 
 .container {
-  margin: 20px;
+  background-color: #aee1f9;
+  background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: rgb(11, 0, 80);
+  padding: 20px;
 }
 
 .search-form-input {
@@ -17,8 +16,11 @@ body {
   border: none;
   padding: 5px 10px;
   border-radius: 8px;
-  margin-right: 5px;
+  margin-bottom: 8px;
+  width: 80%;
+  max-width: 250px;
 }
+
 .submit-button {
   font-size: 14px;
   border: 0.5px solid rgb(93, 93, 93);
@@ -37,16 +39,18 @@ body {
 h1 {
   color: rgb(11, 0, 80);
   margin: 20px 0 0 0;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .icon {
-  width: 120px;
-  height: 120px;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
 }
+
 h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .weather-descriptions {
@@ -68,31 +72,47 @@ h2 {
 
 .forecast-5days {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  gap: 10px;
 }
+
 .forecast-details {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 300px;
   padding-right: 10px;
+  height: 250px;
 }
 
 .forecast-icon {
-  width: 50px;
-  height: 50px;
+  max-width: 50px;
+  width: 100%;
+  height: auto;
 }
+
 .description {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-@media (min-width: 600px) {
-  .container {
-    margin: 60px;
+/* Small phones (under 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 24px;
   }
+  h2 {
+    font-size: 28px;
+  }
+  .search-form-input,
+  .submit-button {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
+/* Tablets and larger (min 600px) */
+@media (min-width: 600px) {
   .search-form {
     text-align: center;
   }
@@ -101,6 +121,7 @@ h2 {
     letter-spacing: 1px;
     padding: 10px 15px;
     margin-right: 20px;
+    width: auto;
   }
   .submit-button {
     font-size: 15px;
@@ -122,7 +143,6 @@ h2 {
     align-items: center;
   }
   h1 {
-    margin: 20px 0 0 0;
     font-size: 40px;
   }
   h2 {
@@ -138,17 +158,19 @@ h2 {
     margin-bottom: 10px;
   }
   .forecast-5days {
-    display: flex;
     justify-content: space-around;
   }
   .day {
     font-size: 18px;
   }
+  .forecast-details {
+    height: 430px;
+  }
   .forecast-icon {
-    width: 70px;
-    height: 70px;
+    max-width: 70px;
   }
   .description {
     font-size: 16px;
+    margin-bottom: 10px;
   }
 }
