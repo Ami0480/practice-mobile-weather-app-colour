@@ -1,10 +1,8 @@
 body {
   margin: 0;
 }
-
 .container {
-  background-color: #aee1f9;
-  background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+  background-image: linear-gradient(315deg, #aee1f9 0%, #ffe2d5 74%);
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: rgb(11, 0, 80);
@@ -12,9 +10,9 @@ body {
 }
 
 .search-form-input {
-  font-size: 14px;
+  font-size: 16px;
   border: none;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 8px;
   margin-bottom: 8px;
   width: 80%;
@@ -22,16 +20,18 @@ body {
 }
 
 .submit-button {
-  font-size: 14px;
+  font-size: 16px;
   border: 0.5px solid rgb(93, 93, 93);
-  padding: 5px 10px;
+  padding: 10px 15px;
+  margin-top: 5px;
   border-radius: 8px;
+  border: none;
   background-color: #fff5fb;
   color: rgb(93, 93, 93);
 }
 .submit-button:hover {
   border-color: transparent;
-  background-color: rgb(132, 132, 132);
+  background-color: rgb(187, 187, 187);
   color: white;
   transition: all 0.2s ease-in-out;
 }
@@ -39,7 +39,7 @@ body {
 h1 {
   color: rgb(11, 0, 80);
   margin: 20px 0 0 0;
-  font-size: 28px;
+  font-size: 34px;
 }
 
 .icon {
@@ -50,19 +50,19 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: 58px;
 }
 
 .weather-descriptions {
   margin-top: 10px;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
 .current-description {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .temperature {
@@ -81,96 +81,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
   height: 250px;
 }
 
 .forecast-icon {
   max-width: 50px;
-  width: 100%;
-  height: auto;
 }
 
 .description {
   text-transform: uppercase;
   font-size: 12px;
-}
-
-/* Small phones (under 400px) */
-@media (max-width: 400px) {
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  .search-form-input,
-  .submit-button {
-    font-size: 13px;
-    padding: 5px 8px;
-  }
-}
-
-/* Tablets and larger (min 600px) */
-@media (min-width: 600px) {
-  .search-form {
-    text-align: center;
-  }
-  .search-form-input {
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 10px 15px;
-    margin-right: 20px;
-    width: auto;
-  }
-  .submit-button {
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 10px 15px;
-  }
-  .current-information {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  .current-temperature {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .current-details {
-    display: flex;
-    align-items: center;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  .weather-descriptions {
-    font-size: 18px;
-  }
-  .current-description {
-    font-size: 18px;
-  }
-  .date-description {
-    margin-bottom: 10px;
-  }
-  .forecast-5days {
-    justify-content: space-around;
-  }
-  .day {
-    font-size: 18px;
-  }
-  .forecast-details {
-    height: 400px;
-  }
-  .forecast-icon {
-    max-width: 70px;
-  }
-  .description {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
 }
