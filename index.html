@@ -27,24 +27,28 @@
         />
         <input type="submit" value="Search" class="submit-button" />
       </form>
+
       <div class="current-information">
-        <div class="current-temperature">
-          <h1 id="city"></h1>
-          <img class="icon" id="icon" />
-          <div class="temperature">
-            <h2 id="current-temperature"></h2>
-            <span>°C</span>
-          </div>
-        </div>
-        <div class="current-details">
-          <div class="weather-descriptions">
-            <div class="date-description">
-              <span id="date"></span>,
-              <span id="description" class="current-description"></span>
+        <h1 id="city"></h1>
+        <div class="current-temperature current-temperature-reverse">
+          <div class="temperatures temperatures-reverse">
+            <img class="icon" id="icon" />
+            <div class="temperature">
+              <h2 id="current-temperature"></h2>
+              <span>°C</span>
             </div>
-            <div>
-              <span>Humidity:<strong id="humidity"></strong>%</span>,
-              <span>Wind:<strong id="wind"></strong>mk/h</span>
+          </div>
+
+          <div class="current-details">
+            <div class="weather-descriptions">
+              <div class="date-description">
+                <span id="date"></span>,
+                <span id="description" class="current-description"></span>
+              </div>
+              <div class="description-details">
+                <span>Humidity:<strong id="humidity"></strong>%</span>,
+                <span>Wind:<strong id="wind"></strong>mk/h</span>
+              </div>
             </div>
           </div>
         </div>

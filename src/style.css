@@ -92,3 +92,100 @@ h2 {
   text-transform: uppercase;
   font-size: 12px;
 }
+
+@media (min-width: 1024px) {
+  .container {
+    width: 800px;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 50px;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  input.search-form-input {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .submit-button {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 48px;
+    text-align: start;
+  }
+
+  .icon {
+    max-width: 150px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  .current-information {
+    margin: 0 50px;
+  }
+  .current-temperature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .current-temperature-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .date-description {
+    margin-bottom: 5px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+  .current-description {
+    font-size: 20px;
+  }
+
+  .temperatures {
+    margin-top: -70px;
+  }
+  .current-details {
+    text-align: left;
+  }
+  .temperatures-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .temperature span {
+    font-size: 24px;
+  }
+
+  .icon {
+    width: 150px;
+  }
+
+  .forecast-5days {
+    justify-content: space-between;
+    margin: 0 50px;
+  }
+  .day {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .forecast-icon {
+    max-width: 80px;
+  }
+}
