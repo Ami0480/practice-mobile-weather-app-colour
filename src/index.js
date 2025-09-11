@@ -70,12 +70,13 @@ function forecastShowElement(response) {
     </div>`;
   });
 }
-
 function displayCity(city) {
-  let currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  let forecastWeatherApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(currentWeatherApiUrl).then(showElement);
-  axios.get(forecastWeatherApiUrl).then(forecastShowElement);
+  let functionUrl = `/api/weather?city=${city}`;
+
+  axios.get(functionUrl).then((response) => {
+    showElement({ data: response.data.current });
+    forecastShowElement({ data: response.data.forecast });
+  });
 }
 
 function searchForCity(event) {
