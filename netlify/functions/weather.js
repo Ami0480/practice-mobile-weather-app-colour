@@ -1,4 +1,4 @@
-export async function handler(event, context) {
+export async function handler(event) {
   const API_KEY = process.env.OPENWEATHER_API_KEY;
   const city = event.queryStringParameters.city || "Perth";
 
