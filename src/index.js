@@ -72,7 +72,6 @@ function forecastShowElement(response) {
 }
 
 function displayCity(city) {
-  let apiKey = "d1193959d2d841ec7555416d715716a6";
   let currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   let forecastWeatherApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(currentWeatherApiUrl).then(showElement);
