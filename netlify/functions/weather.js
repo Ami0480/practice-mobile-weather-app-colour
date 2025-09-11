@@ -14,6 +14,15 @@ export async function handler(event, context) {
     const currentData = await currentRes.json();
     const forecastData = await forecastRes.json();
 
+    if (currentData.cod !== 200 || forecastData.cod !== "200") {
+      return {
+        statusCode: currentData.cod || 500,
+        body: JSON.stringify({
+          error: currentData.message || "City not found",
+        }),
+      };
+    }
+
     return {
       statusCode: 200,
       body: JSON.stringify({
